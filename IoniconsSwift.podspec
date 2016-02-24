@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "2.0.1"
   s.summary      = "Swift port of ionicons-iOS. Allows you to easily use ionicons in your Swift projects."
   s.homepage     = "https://github.com/tomsterritt/IoniconsSwift"
-  s.license      = { :type => 'MIT', :file => 'ionicons/LICENSE' }
+  s.license      = { :type => 'MIT', :file => 'ionicons/LICENSE.md' }
   s.author       = { "Tom Sterritt" => "tom@sterri.tt" }
   s.source       = { :git => "https://github.com/tomsterritt/IoniconsSwift.git", :tag => "2.0.1" }
   s.platform     = :ios, '8.0'
