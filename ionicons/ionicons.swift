@@ -41,6 +41,22 @@ public extension UIFont {
     }
 }
 
+public extension UILabel {
+    static func labelWithIonicon(icon: ionicon, color: UIColor, iconSize: CGFloat) -> UILabel {
+        let label = UILabel()
+        
+        label.font = UIFont.ioniconFontOfSize(iconSize)
+        label.text = icon.rawValue
+        label.textColor = color
+        
+        label.sizeToFit()
+        
+        label.accessibilityElementsHidden = true
+        
+        return label
+    }
+}
+
 public extension UIImage {
     static func imageWithIonicon(icon: ionicon, color: UIColor, iconSize: CGFloat, imageSize: CGSize) -> UIImage {
         let style = NSMutableParagraphStyle()

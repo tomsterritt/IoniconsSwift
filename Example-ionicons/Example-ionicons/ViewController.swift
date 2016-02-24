@@ -14,14 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Font example
-        let label = UILabel(frame: CGRectMake(10, 20, self.view.frame.size.width, 24))
-        label.font = UIFont.ioniconFontOfSize(20.0)
-        label.text = ionicon.Wand.rawValue
-        label.sizeToFit()
+        let button = UIButton(frame: CGRectMake(10, 20, 80, 44))
+        button.titleLabel!.font = UIFont.ioniconFontOfSize(30.0)
+        button.setTitle(ionicon.Wand.rawValue, forState: .Normal)
+        button.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        self.view.addSubview(button)
+        
+        // Label example
+        let label = UILabel.labelWithIonicon(ionicon.Wand, color: UIColor.redColor(), iconSize: 20.0)
+        label.frame = CGRectMake(10, 70, label.frame.size.width, label.frame.size.height)
         self.view.addSubview(label)
         
         // Image example
-        let imageView = UIImageView(frame: CGRectMake(10, 50, 50, 50))
+        let imageView = UIImageView(frame: CGRectMake(10, 100, 50, 50))
         imageView.image = UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40.0, imageSize: CGSizeMake(50, 50))
         self.view.addSubview(imageView)
     }

@@ -15,7 +15,14 @@ For available icons, look at [ionicon.swift](/ionicons/ionicon.swift) - these sh
 UIFont.ioniconFontOfSize(30.0)
 ```
 
+#### Label
+
+``` Swift
+UILabel.labelWithIonicon(ionicon.Wand, color: UIColor.redColor(), iconSize: 20.0)
+```
+
 #### Image
+
 ``` Swift
 UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40.0, imageSize: CGSizeMake(50, 50))
 ```

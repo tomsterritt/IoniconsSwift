@@ -1,43 +1,28 @@
-# ionicons-sift
+# IoniconsSwift
 Easily use ionicons in your Swift projects
 
 A Swift port of [sweetmandm/ionicons-iOS](https://github.com/sweetmandm/ionicons-iOS).
 
-Currently using: Ionicons v2.0.1
+Currently using Ionicons v2.0.1
 
-### Usage:
+### Usage
 
-For available icons, look at ionicons-codes.h or [browse them at the **ionicons** website](http://ionicons.com).
+For available icons, look at [ionicon.swift](/ionicons/ionicon.swift) - these should autocomplete using `ionicon.[...]`
 
-The available icon names will autocomplete if you've included the `IonIcons.h` header when you type `ion_...`
+#### Font
 
-Get the font:
+``` Swift
+UIFont.ioniconFontOfSize(30.0)
+```
 
-    UIFont *ionIconsFont = [IonIcons fontWithSize:30.0f];
+#### Label
 
-Make a UILabel with an ionicons icon:
+``` Swift
+UILabel.labelWithIonicon(ionicon.Wand, color: UIColor.redColor(), iconSize: 20.0)
+```
 
-    UILabel *label = [IonIcons labelWithIcon:ion_ionic size:20.0f color:[UIColor blackColor]];
+#### Image
 
-Render an ionicons icon in a UIImage:
-
-        UIImage *icon = [IonIcons imageWithIcon:ion_ionic
-                                      iconColor:[UIColor redColor] 
-                                       iconSize:60.0f 
-                                      imageSize:CGSizeMake(90.0f, 90.0f)];
-
-
-### Installation Step 1:
-
-CocoaPods is great:
-
-1. add `pod 'ionicons-swift'` to your Podfile
-2. `pod install`
-
-Non-CocoaPods is easy too:
-
-1. Drag the folder 'ionicons' with the source files into your project
-
-### License
-ionicons is released under the MIT license and was built by the people at http://ionicframework.com. Learn more at http://ionicons.com
-The stuff specific to ionicons-iOS is also released under the MIT license.
+``` Swift
+UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40.0, imageSize: CGSizeMake(50, 50))
+```
