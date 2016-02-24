@@ -16,9 +16,9 @@ task :updateCodes do
   updatePodspec(version)
 
   # update the icon codes
-	codes_file = File.open('ionicons/ionicon.swift', 'w')
+	codes_file = File.open('ionicons/ionicon.swift', 'a')
     
-    codes_file.puts("enum ionicon: String {")
+    codes_file.puts("public enum ionicon: String {")
 
 	doc.css('div.icon-row').each do |icon_row|
         icon_name = icon_row.css('div.preview-icon span.size-12 i')[0]["class"][5..-1].split('-')
@@ -47,16 +47,16 @@ end
 
 def updateReadme(version)
   text = File.read('README.md')
-  new_contents = text.gsub( /^Currently using.*$/, "Currently using: #{version}")
+  new_contents = text.gsub(/Currently using.*$/, "Currently using #{version}")
   readme_file = File.open('ionicons/README.md', 'w') { |file| file.puts new_contents }
 end
 
 def updatePodspec(version)
   version = version.delete('^0-9\.')
-  text = File.read('IonIcons.podspec')
+  text = File.read('IoniconsSwift.podspec')
   text = text.gsub( /s.version      = \".*\"/, "s.version      = \"#{version}\"")
   text = text.gsub(/:tag =>.*\"/, ":tag => \"#{version}\"")
-  podspec_file = File.open('IonIcons.podspec', 'w') { |file| file.puts text }
+  podspec_file = File.open('IoniconsSwift.podspec', 'w') { |file| file.puts text }
 end
 
 desc "Updates to the latest ionicons font file and updates the ionicons-codes.h with the latest codes"

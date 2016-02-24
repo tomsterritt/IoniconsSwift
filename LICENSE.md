@@ -2,7 +2,7 @@ The MIT License (MIT)
 
 ionicons.ttf: Copyright (c) 2016 Drifty (http://drifty.com/)
 
-ionicons-swift: Copyright (c) 2016 Tom Sterritt (http://sterri.tt)
+IoniconsSwift: Copyright (c) 2016 Tom Sterritt (http://sterri.tt)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

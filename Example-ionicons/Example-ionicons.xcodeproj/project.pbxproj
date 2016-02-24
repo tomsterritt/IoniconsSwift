@@ -18,7 +18,6 @@
 		5542067618217160005A3D9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5542067518217160005A3D9E /* UIKit.framework */; };
 		5542067C18217160005A3D9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5542067A18217160005A3D9E /* InfoPlist.strings */; };
 		5542068D18217160005A3D9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5542068C18217160005A3D9E /* Images.xcassets */; };
-		554206B218217179005A3D9E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 554206AE18217179005A3D9E /* LICENSE */; };
 		55FFA09A1BDBFDD90004F457 /* ionicons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55FFA0991BDBFDD90004F457 /* ionicons.bundle */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +35,7 @@
 		5542067918217160005A3D9E /* Example-ionicons-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-ionicons-Info.plist"; sourceTree = "<group>"; };
 		5542067B18217160005A3D9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5542068C18217160005A3D9E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		554206AE18217179005A3D9E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		55FFA0991BDBFDD90004F457 /* ionicons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ionicons.bundle; sourceTree = "<group>"; };
-		644532D81BAB270E00DC25F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +82,6 @@
 		5542067718217160005A3D9E /* Example-ionicons */ = {
 			isa = PBXGroup;
 			children = (
-				644532D81BAB270E00DC25F0 /* README.md */,
 				554206A918217179005A3D9E /* ionicons */,
 				3852AE301C7CF8E000623A43 /* AppDelegate.swift */,
 				3852AE341C7CF93C00623A43 /* ViewController.swift */,
@@ -109,7 +105,6 @@
 		554206A918217179005A3D9E /* ionicons */ = {
 			isa = PBXGroup;
 			children = (
-				554206AE18217179005A3D9E /* LICENSE */,
 				55FFA0991BDBFDD90004F457 /* ionicons.bundle */,
 				3852AE361C7CF96800623A43 /* ionicon.swift */,
 				3852AE381C7DBA3E00623A43 /* ionicons.swift */,
@@ -172,7 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3852AE3D1C7DC4A800623A43 /* Launch Screen.storyboard in Resources */,
-				554206B218217179005A3D9E /* LICENSE in Resources */,
 				55FFA09A1BDBFDD90004F457 /* ionicons.bundle in Resources */,
 				5542068D18217160005A3D9E /* Images.xcassets in Resources */,
 				5542067C18217160005A3D9E /* InfoPlist.strings in Resources */,
