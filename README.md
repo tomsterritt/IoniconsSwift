@@ -1,4 +1,4 @@
-# ionicons-sift
+# IoniconsSwift
 Easily use ionicons in your Swift projects
 
 A Swift port of [sweetmandm/ionicons-iOS](https://github.com/sweetmandm/ionicons-iOS).
