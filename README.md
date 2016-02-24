@@ -26,3 +26,10 @@ UILabel.labelWithIonicon(ionicon.Wand, color: UIColor.redColor(), iconSize: 20.0
 ``` Swift
 UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40.0, imageSize: CGSizeMake(50, 50))
 ```
+
+### Install
+#### Cocoapods
+`pod 'Ionicons-Swift', '2.0.1'`
+
+#### Manual
+Drag the `ionicons` folder into your project
