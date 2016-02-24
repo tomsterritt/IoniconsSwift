@@ -5,7 +5,7 @@
 //  Copyright © 2016 Tom Sterritt. All rights reserved.
 //
 
-enum ionicon: String {
+public enum ionicon: String {
 	case Alert = "\u{f101}"
 	case AlertCircled = "\u{f100}"
 	case AndroidAdd = "\u{f2c7}"

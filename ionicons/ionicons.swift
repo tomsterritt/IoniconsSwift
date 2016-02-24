@@ -14,7 +14,7 @@ class ionicons {
     static let fontName = "ionicons"
 }
 
-extension UIFont {
+public extension UIFont {
     static func ioniconFontOfSize(size: CGFloat) -> UIFont {
         var font = UIFont(name: ionicons.fontName, size: size)
         
@@ -41,7 +41,7 @@ extension UIFont {
     }
 }
 
-extension UIImage {
+public extension UIImage {
     static func imageWithIonicon(icon: ionicon, color: UIColor, iconSize: CGFloat, imageSize: CGSize) -> UIImage {
         let style = NSMutableParagraphStyle()
         style.alignment = .Left
