@@ -28,6 +28,11 @@ class ViewController: UIViewController {
         // Image example
         let imageView = UIImageView(frame: CGRectMake(10, 100, 50, 50))
         imageView.image = UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40.0, imageSize: CGSizeMake(50, 50))
+        
+        // Border to prove central
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.redColor().CGColor
+        
         self.view.addSubview(imageView)
     }
 

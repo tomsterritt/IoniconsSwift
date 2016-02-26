@@ -75,7 +75,7 @@ public extension UIImage {
         
         let boundingRect = attString.boundingRectWithSize(CGSize(width: iconSize, height: iconSize), options: .UsesDeviceMetrics, context: ctx)
         
-        attString.drawInRect(CGRect(x: (imageSize.width / 2) - boundingRect.size.width / 2, y: (imageSize.height / 2) - boundingRect.size.height / 2, width: imageSize.width, height: imageSize.height))
+        attString.drawInRect(CGRect(x: (imageSize.width / 2) - (boundingRect.size.width / 2), y: (imageSize.height / 2) - (iconSize / 2), width: imageSize.width, height: imageSize.height))
         
         var image = UIGraphicsGetImageFromCurrentImageContext()
         
