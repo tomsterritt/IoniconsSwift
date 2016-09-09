@@ -15,23 +15,23 @@ class ionicons {
 }
 
 public extension UIFont {
-    static func ioniconFontOfSize(size: CGFloat) -> UIFont {
+    static func ioniconFontOfSize(_ size: CGFloat) -> UIFont {
         var font = UIFont(name: ionicons.fontName, size: size)
         
         if (font == nil) {
-            if let bundle = NSBundle(URL: NSBundle(forClass: ionicons.self).URLForResource(ionicons.fontName, withExtension: "bundle")!) {
-                if let fontData = NSData(contentsOfURL: bundle.URLForResource(ionicons.fontName, withExtension: "ttf")!) {
-                    var error: Unmanaged<CFErrorRef>?
+            if let bundle = Bundle(url: Bundle(for: ionicons.self).url(forResource: ionicons.fontName, withExtension: "bundle")!) {
+                let fontUrl = bundle.url(forResource: ionicons.fontName, withExtension: "ttf")
+                
+                let provider = CGDataProvider(url: fontUrl as! CFURL)
+                let newFont = CGFont(provider!)
+                
+                var error: Unmanaged<CFError>?
                     
-                    let provider = CGDataProviderCreateWithCFData(fontData)
-                    let newFont = CGFontCreateWithDataProvider(provider)
-                    
-                    if (!CTFontManagerRegisterGraphicsFont(newFont!, &error)) {
-                        NSLog("Ionicons: Failed to load font: ", error.debugDescription)
-                    }
-                    
-                    font = UIFont(name: ionicons.fontName, size: size)
+                if (!CTFontManagerRegisterGraphicsFont(newFont, &error)) {
+                    NSLog("Ionicons: Failed to load font: ", error.debugDescription)
                 }
+                    
+                font = UIFont(name: ionicons.fontName, size: size)
             } else {
                 assertionFailure("Ionicons: Could not load bundle")
             }
@@ -42,7 +42,7 @@ public extension UIFont {
 }
 
 public extension UILabel {
-    static func labelWithIonicon(icon: ionicon, color: UIColor, iconSize: CGFloat) -> UILabel {
+    static func labelWithIonicon(_ icon: ionicon, color: UIColor, iconSize: CGFloat) -> UILabel {
         let label = UILabel()
         
         label.font = UIFont.ioniconFontOfSize(iconSize)
@@ -58,10 +58,10 @@ public extension UILabel {
 }
 
 public extension UIImage {
-    static func imageWithIonicon(icon: ionicon, color: UIColor, iconSize: CGFloat, imageSize: CGSize) -> UIImage {
+    static func imageWithIonicon(_ icon: ionicon, color: UIColor, iconSize: CGFloat, imageSize: CGSize) -> UIImage {
         let style = NSMutableParagraphStyle()
-        style.alignment = .Left
-        style.baseWritingDirection = .LeftToRight
+        style.alignment = .left
+        style.baseWritingDirection = .leftToRight
         
         UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0);
         
@@ -73,16 +73,14 @@ public extension UIImage {
         
         let ctx = NSStringDrawingContext()
         
-        let boundingRect = attString.boundingRectWithSize(CGSize(width: iconSize, height: iconSize), options: .UsesDeviceMetrics, context: ctx)
+        let boundingRect = attString.boundingRect(with: CGSize(width: iconSize, height: iconSize), options: .usesDeviceMetrics, context: ctx)
         
-        attString.drawInRect(CGRect(x: (imageSize.width / 2) - (boundingRect.size.width / 2), y: (imageSize.height / 2) - (iconSize / 2), width: imageSize.width, height: imageSize.height))
+        attString.draw(in: CGRect(x: (imageSize.width / 2) - (boundingRect.size.width / 2), y: (imageSize.height / 2) - (iconSize / 2), width: imageSize.width, height: imageSize.height))
         
         var image = UIGraphicsGetImageFromCurrentImageContext()
         
-        if (image.respondsToSelector("imageWithRenderingMode")) {
-            image = image.imageWithRenderingMode(.AlwaysOriginal)
-        }
+        image = image?.withRenderingMode(.alwaysOriginal)
         
-        return image
+        return image!
     }
 }
