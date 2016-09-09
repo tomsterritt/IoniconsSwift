@@ -29,7 +29,7 @@ UIImage.imageWithIonicon(ionicon.Wand, color: UIColor.greenColor(), iconSize: 40
 
 ### Install
 #### Cocoapods
-`pod 'Ionicons-Swift', '2.0.1'`
+`pod 'Ionicons-Swift', :git => 'https://github.com/tomsterritt/IoniconsSwift'`
 
 #### Manual
 Drag the `ionicons` folder into your project
