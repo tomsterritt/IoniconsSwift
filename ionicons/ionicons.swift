@@ -24,9 +24,9 @@ public extension UIFont {
                     var error: Unmanaged<CFErrorRef>?
                     
                     let provider = CGDataProviderCreateWithCFData(fontData)
-                    let newFont = CGFontCreateWithDataProvider(provider)
+                    let newFont = CGFontCreateWithDataProvider(provider!)
                     
-                    if (!CTFontManagerRegisterGraphicsFont(newFont!, &error)) {
+                    if (!CTFontManagerRegisterGraphicsFont(newFont, &error)) {
                         NSLog("Ionicons: Failed to load font: ", error.debugDescription)
                     }
                     
@@ -79,10 +79,10 @@ public extension UIImage {
         
         var image = UIGraphicsGetImageFromCurrentImageContext()
         
-        if (image.respondsToSelector("imageWithRenderingMode")) {
-            image = image.imageWithRenderingMode(.AlwaysOriginal)
+        if (image!.respondsToSelector("imageWithRenderingMode")) {
+            image = image!.imageWithRenderingMode(.AlwaysOriginal)
         }
         
-        return image
+        return image!
     }
 }

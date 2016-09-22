@@ -142,6 +142,11 @@
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Tom Sterritt";
+				TargetAttributes = {
+					5542066D1821715F005A3D9E = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 554206691821715F005A3D9E /* Build configuration list for PBXProject "Example-ionicons" */;
 			compatibilityVersion = "Xcode 6.3";
@@ -290,6 +295,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -308,6 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tomsterritt.Example-ionicons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 2.3;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
